@@ -1,0 +1,14 @@
+nc <name>
+	<text> - create a card in the currently opened group
+ng <name> - create a new group
+cd <group> - choose the currently opened group
+cd.. - close the group
+!!!The * means that u need to write an argument if group wasn't open!!!
+print - print all groups
+print -g *<group's name> - print the group
+print -gh *<group's name> - print only card's name in the group
+print -n *<group> <card's number> - print the card in the group
+print -nh *<group> <card's number> - print the card's name in the group
+rm -g <groups's number> - remove the group
+rm -n <card's number> - remove the card in the group
+quit - close the app
