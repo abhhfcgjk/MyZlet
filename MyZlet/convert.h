@@ -39,7 +39,8 @@ void printNames(V file) {
             unsigned char i{};
             while (line[i++] != '-') {}
             std::string cardName;
-            cardName.assign(line,0, i-2);
+            if(i >= 2)
+                cardName.assign(line,0, i-2);
 
             std::cout << number << ") " << cardName << std::endl;
             number++;

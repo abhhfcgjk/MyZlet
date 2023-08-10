@@ -49,15 +49,16 @@ std::string getByNumberName(unsigned number, std::string file) {
 std::vector<std::string> getCommand() {
     char c;
     std::vector<std::string> splitted_command{};
-    std::string str;
+    std::string str{};
     while (std::cin.get(c)) {
         if(c != ' ' && c!='\n' && c != EOF)
             str.push_back(c);
         if (c == '\n' || c == EOF || c==' ') {
             if(!str.empty())
                 splitted_command.push_back(str);
-            if(c=='\n' || c == EOF)
+            if (c == '\n' || c == EOF) {
                 return splitted_command;
+            }
             else
                 str = "";
         }
